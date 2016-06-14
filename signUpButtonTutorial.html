@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<!--a button with an attached url. ""RegisterURL" will have its place taken by the registration page URL.
-<a> refers to a link, and href refers to the specific URL that is being linked to."-->
+<!--
+href = specifies the URL of the page the link goes to
+a button with an attached url, enter where you wnat the sign up button to take over a user has click on it in "RegisterURL"
+
+-->
+
 <a href="RegisterURL" class="button">Sign Up Now!</a>
 </body>
 </html>
 
 <!-- defines style informartion for an HTML document -->
 <style>
-    /*THE COMMENTS IN THIS SECTION CAN EITHER BE KEPT AS COMMENTS OR
-    ADDED TO THE DESCRIPTION -- lois*/
-    /*"change the colors and fonts to your preference."*/
+    
+    /*this where you can define your information for the signup button adding color, fonts and other things*/
+
     .button {
         background-color: #139174;
-        border-style: outset; /* "add a style around the button edges"*/
+        border-style: outset; 
         border-color: #139174;
         color: white;
-        padding: 15px 30px; /* "generate space inside the button to make it more bigger" */
+        padding: 15px 30px; 
         text-align: center;
-        text-decoration: none; /* "take away the decoration on the text--otherwise, it would
-        have an underline since it is a link."*/
+        text-decoration: none; /* take away the decoration on the text*/
         display: inline-block;
-        /*"Choose the font."*/
         font-family: "Trebuchet MS", Helvetica, sans-serif;
         font-size: 20px;
-       
-        cursor: pointer; /*"set the cursor style when mouse over"*/
-       
+        cursor: pointer;
+        border-radius: 12px; 
 
 
     }
-    /*characteristic of the button when you mouse over it.*/
+    /*when you mouse over the button the properties that are listed below will change all the rest of the properties will stay the same*/
+
     .button:hover {
         background-color: #85ddb3;
         border: inset;

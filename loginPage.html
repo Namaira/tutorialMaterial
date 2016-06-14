@@ -5,30 +5,45 @@
     <title>Login</title>
 </head>
 <body>
-<!--make a form that will be used as the way to login-->
+
+<!--<form> is how you make a form by using the form users are able to write down question that you provide and are able to submit the form back to you -->
+
+<!--this is how you set up the form
+method "get" is the default options
+accept-charset = specifies the character encodings that are to be used for hte form submission
+action = where to send the form-data when a form is submitted
+placeholder = a short hint that describes the expected value of an input field 
+for = is a label tag, that defines a label for an <input> element
+name = specifies the name of an anchor
+required = specifies that an input filed must be filled out before submitting the form
+type = specifes the type of <input> element to display
+label = defines a label fo an <input> element
+input = specifies an input field where the user can enter data
+-->
+
 <form name="login" action="index_submit" method="get" accept-charset="utf-8">
-    <ul class="form">
+   <ul class="form">
+        <!--these lines are making a text box called username where the user will enter thier email address, putting the input type as a email, will let it know it wants a email-->
         <li>
-           <!--making a text box that will be used for entering the email address-->
             <label for="usermail">Email</label>
-            <input type="email" name="username" placeholder="yourname@email.com" required> <!--making it so it is required to have filled out before moving on-->
+            <input type="email" name="username" placeholder="yourname@email.com" required> 
         </li>
+          <!--Again theses lines are making a input field where the user will enter in his password, putting the input type as password will let it know it should be a password -->
         <li>
-            <!--making a text box that will be used for entering the password-->
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="password" required> <!--making it so it is required to have filled out before moving on-->
+            <input type="password" name="password" placeholder="password" required> 
         </li>
+         <!--making a button that will be used to submit the data that has been collected-->
         <li>
-           <!--making a button that will be used to submit the data from email and password-->
             <input type="submit" class = "button" value="Login">
         </li>
     </ul>
 </form>
 </body>
 
-<!--giving commands to the object to make them more neat and presentable -->
+<!--style is where you defined style information for the html-->
 <style>
-    /* formatting the text boxes */
+    /* defining for the form */
     ul.form {
         list-style-type: none; /*take away default bullet points*/
         margin: 5em;
@@ -38,32 +53,27 @@
         font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 
-    /*giving options to the button*/
+    /*defining the style information for the button*/
     .button {
-       /* choosing the color for the button */
         background-color: #70d5b3;
         border-style: outset; /* set the style orund the edges of the button*/
         border-color: #70d5b3;
         color: white;
-       
         padding: 5px 20px; /* to generate space around the text */
-        /*align the button in the center*/
         text-align: center;
          display: inline-block;
         text-decoration: none;/*take away the decoration on the texts*/
-       
-        /* setting the fonts */
         font-family: "Trebuchet MS", Helvetica, sans-serif;
         font-size: 15px;
-        /*seeting what the cursor should be when mouse over the button*/
         cursor: pointer;
-        /* setting the button as round on the edges instead of it being rectanglar*/
-        border-radius: 12px;
-         
-         margin: 0.3em 0em; /* putting a margin around the button, to give it space and not be touching other objects on the page*/
+        border-radius: 12px; /* setting the button as round on the edges instead of it 
+                                being rectanglar*/
+         margin: 0.3em 0em; /* putting a margin around the button, to give it space 
+                               and not be touching other objects on the page*/
     }
 
-    /*charascteristic of the button when you mouse over it*/
+    /*theses are the characteristic for the button when you mouse over it, the button porperties will change to theses the rest will stay the same*/
+
     .button:hover {
         background-color: #a9f0c4;
         border: inset;
