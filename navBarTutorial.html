@@ -1,8 +1,10 @@
 <!--NAVBAR
 //http://www.w3schools.com/howto/howto_js_topnav.asp-->
 
-<!--Set up a list of whatever items you would like your navigation bar to have. Active
-refers to whichever tab the user is on.-->
+<!--Set up a list of whatever items you would like your navigation bar to have. "The <ul> tag
+refers to an unordered list, and the <li> tag refers to the list elements. Give each a class name
+like item1, item2, etc.,to facilitate styling, though you can choose to not do this if you'd like
+each list item to look the same."-->
 <!DOCTYPE html>
 <html>
 <body>
@@ -22,28 +24,30 @@ refers to whichever tab the user is on.-->
 
 <style>
 
-    /*Style the background here. It is currently set to white.*/
-    /* Remove margins and padding from the list, and add a black background color */
+    /*Style the background here. "We are looking at the unordered list as
+    a whole here in this section.*/
     ul{
 
         margin: 0;
         padding: 0;
-
-
     }
-    /*navbar characteristic */
+    /*Set the navbar characteristics here. "By using flex,
+     we allow the item boxes to take up the horizontal span of the screen
+     in equal portions. Changing the list-style-type to none gets rid of
+     bullet points.*/
     ul.navbar {
         display: flex;
-        justify-content: space-around;
         margin: 0;
         padding: 0;
         width: 100%;
         list-style-type: none;
         overflow: hidden;
-        background-color: #333;
+        background-color: #333332;
     }
 
-    /* navbar list characteristic, Set the list items to float side by side */
+    /* Set the characteristics of the navbar list elements here. "By setting the
+     text-align to center, the text is centered within its box. float:left allows the
+     boxes to sit side by side instead of stacking vertically." */
     ul.navbar li {
         text-align: center;
         float: left;
@@ -52,7 +56,8 @@ refers to whichever tab the user is on.-->
 
     }
 
-    /* Style the links inside the list items */
+    /* Style the links inside the list items here. ""Everything here is based
+     on aesthetic preference, so play around."*/
     ul.navbar li a {
         display: inline-block;
         color: #f2f2f2;
@@ -68,7 +73,7 @@ refers to whichever tab the user is on.-->
     }
 
     /* Change the background color of the links being
-    hovered over and the ones that are active. */
+    hovered over and the ones that are active (being clicked). */
     ul.navbar li:hover {background-color: #4e9c7a;}
     ul.navbar li:active {background-color: #b0f0d9;}
 </style>

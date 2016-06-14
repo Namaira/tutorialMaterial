@@ -9,3 +9,7 @@ descriptions, which are the ones that can be placed off to the side.
 Difficulty ranking:
 photoTutorial, iconTutorial, signUpButtonTutorial, navBarTutorial,
 jumbotronTutorial, footerTutorial, loginPage.
+
+Ideas for other tutorials:
+custom scroll bar
+
