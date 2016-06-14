@@ -2,37 +2,50 @@
 <!DOCTYPE html>
 <html>
 <body>
+<!-- Create a wrapper around the content and the footer. "By creating a wrapper, we can manipulate
+both the content and the footer at once in the CSS."-->
 <div id="wrapper">
-    <div id="content">content here</div>
-    <div id="footer"></div>
+    <div id="content"> Content here. Wohoo!</div>
+    <div id="footer">
+        Stuff in the footer, maybe some contact icons?</div>
 </div>
 </body>
 </html>
 
-//css
-html,
-body {
-    margin:0;
-    padding:0;
-    height:100%;
-}
-//the wrapper, which contains both the content and the footer.
-#wrapper {
-    min-height:100%;
-    position:relative;
-}
+<style>
+    body {
+        margin:0;
+        padding:0;
+        height:100%;
+    }
+    /*the wrapper, which contains both the content and the footer. "position: relative
+    means that the footer will not be affected by the lack of length of the content --
+    even if the page is short on content, the footer will stay at the bottom of the page"*/
+    #wrapper {
+        min-height:100%;
+        position:relative;
 
-//height of the footer
-#content {
-    padding-bottom:100px;
-}
+    }
 
-//style of the footer
-#footer {
-    background:#ffab62;
-    width:100%;
-    height:100px;
-    position:absolute;
-    bottom:0;
-    left:0;
-}
+    /*height of the footer*/
+    #content {
+        padding-bottom:0px;
+    }
+
+    /*style of the footer*/
+    #footer {
+        color: white;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        text-align: center;
+        background: lightblue;
+        /*"change padding-top to change the location of the text within the footer, and change
+        height to change the height of the footer itself."*/
+        padding-top: 40px;
+        width:100%;
+        height:100px;
+        position:absolute;
+        bottom:0;
+        left:0;
+
+    }
+</style>

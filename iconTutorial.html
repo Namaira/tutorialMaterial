@@ -1,21 +1,40 @@
 
 //CONTACT ICONS
 //http://www.w3schools.com/icons/
-//remember to add links
+
 <!DOCTYPE html>
 <html>
 <head>
-    //You can find icons from an external source. Another examples
+    <!--You can find icons from an external source, such as FontAwesome or Bootstrap. "<link> is used to
+    refer to a relationship between the current document and an external source, in this case FontAwesome's
+    icons. rel describes the type of relationship, in this case a stylesheet, and href specifies the url
+    of the external source."-->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
-// Place the icons with these lines of code.
-<a href = "http://www.twitter.com"><i class="fa fa-twitter" style="font-size:30px"]></i></a>
-<a href = "http://www.facebook.com"><i class="fa fa-facebook-official" style="font-size:30px"]></i></a>
-<a href = "http://www.linkedin.com"><i class="fa fa-linkedin-square" style="font-size:30px"]></i></a>
-<a href = "http://www.gmail.com"><i class="fa fa-envelope" style="font-size:30px"]></i></a>
-<a href = "full url"><i class="fa iconName" style="font-size:30px"]></i></a>
+<!--Place the icons with these lines of code. "<a> refers to a link, and <span> refers to an inline element,
+which isn't necessarily an icon. <div> and <span> are similar, but <span> should be used for an element contained
+within a paragraph. class = "fa fa-twitter" refers to the icon itself. -->
+<a href = "http://www.twitter.com"><span class="fa fa-twitter" style="font-size:30px"]></span></a>
+<a href = "http://www.facebook.com"><span class="fa fa-facebook-official" style="font-size:30px"]></span></a>
+<a href = "http://www.linkedin.com"><span class="fa fa-linkedin-square" style="font-size:30px"]></span></a>
+<a href = "http://www.gmail.com"><span class="fa fa-envelope" style="font-size:30px"]></span></a>
+<a href = "full url"><span class="fa iconName" style="font-size:30px"]></span></a>
 
 </body>
 </html>
+
+
+<style>
+
+    /*Customize the standard and hover colors to your liking.*/
+    .fa {
+        color: pink;
+    }
+
+
+    .fa:hover {
+        color: lightblue;
+    }
+</style>
