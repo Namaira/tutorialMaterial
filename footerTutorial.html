@@ -1,45 +1,79 @@
-//http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/
+
 <!DOCTYPE html>
 <html>
 <body>
-<!-- Create a wrapper around the content and the footer. "By creating a wrapper, we can manipulate
-both the content and the footer at once in the CSS."-->
+
+<!--
+Create a div called "wrapper" that 'wraps' around the content and footer divs
+--this means we can manipulate both the content and the footer at once in the CSS.
+
+The "content" and "footer" divs contain the content and footer respectively, so by
+creating a div that encompasses both of them, we can style them as a group,
+thus allowing us to do things like having the spacing between the content and the
+footer change based on the size of the content.
+-->
+
 <div id="wrapper">
-    <div id="content"> Content here. Wohoo!</div>
-    <div id="footer">
-        Stuff in the footer, maybe some contact icons?</div>
+
+    <div id="content">Content here. Wohoo!</div>
+    <div id="footer">Stuff in the footer, maybe some contact icons?</div>
+
 </div>
 </body>
 </html>
 
 <style>
+    html,
     body {
         margin:0;
         padding:0;
         height:100%;
     }
-    /*the wrapper, which contains both the content and the footer. "position: relative
+    /*
+    You can style the wrapper -- the container of the content and footer, here.
+
+    min-height:100% means that the footer will be pushed to the bottom of the page, while position: relative
     means that the footer will not be affected by the lack of length of the content --
-    even if the page is short on content, the footer will stay at the bottom of the page"*/
+    even if the page is short on content, the footer will stay at the bottom of the page.
+    */
     #wrapper {
         min-height:100%;
         position:relative;
-
     }
 
-    /*height of the footer*/
+    /*
+    Style the content here.
+
+    Setting padding-bottom to 140px ensures that the footer will not overlap with the content, since the
+    footer is currently set to be 100+40px tall (padding-top + height, found in #footer).
+    */
     #content {
-        padding-bottom:0px;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        padding-bottom: 140px;
     }
 
-    /*style of the footer*/
+    /*
+    style the footer here.
+
+    text-align:center centers the text. Everything else is self-explanatory.
+    */
     #footer {
         color: white;
         font-family: "Trebuchet MS", Helvetica, sans-serif;
         text-align: center;
         background: lightblue;
-        /*"change padding-top to change the location of the text within the footer, and change
-        height to change the height of the footer itself."*/
+
+        /*
+        change padding-top to change the location of the text within the footer, and change
+        height to change the height of the footer itself.Keep in mind you'll have to change
+        padding-bottom in #content as well.
+
+        position:absolute means that the footerwill be styled with respect to the wrapper.
+        Since the min-height of the wrapper is 100%, the bottom of the footer will always
+        stay at the bottom of the page--essentially,it's rising 140px above the very bottom
+        of the wrapper. The wrapper will grow as more content is added.
+        */
+
         padding-top: 40px;
         width:100%;
         height:100px;

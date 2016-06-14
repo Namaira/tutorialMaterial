@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <body>
+<!--
+<src> refers to the source of the image and <class> refers to the name you can use
+when styling in css. If the photo does not load,the text assigned to alt is displayed. if you do not
+specify the width and height, the page might render slower.
 
-<!--You can use this format to place photos into your page.if the photo does not load,
-the text assigned to alt is displayed. if you do not specify the width and height,
-the page might render slower. "<src> refers to the source of the image and <class> refers to the name you can use
-when styling in css. Keep in mind that if you only place in the name of the photo, it must be in the same folder
-as the document. Otherwise, you have to specify a file path."-->
+You can use this format to place photos into your page. If you only place in the name of the photo,
+it must be in the same folder as the document -- otherwise, you have to specify a file path.
+-->
 <img src="photoNameHere" class = "first" alt="Description" style="width:INSERTpx;height:INSERTpx;" >
 <img src="photoNameHere" class = "second" alt="Description" style="width:INSERTpx;height:INSERTpx;">
 
@@ -13,18 +15,30 @@ as the document. Otherwise, you have to specify a file path."-->
 </html>
 
 <style>
-    /*here are a few examples of how you can style a photo. "The display type refers to how the image is placed
-    in the page-- either inline with the text around it or in a block of its own. border-radius creates a rounding
-    effect."*/
+    /*
+    here are a few examples of how you can style a photo.
+
+    The display type refers to how the image is placed in the page
+    --either inline with the text around it or in a block of its own.
+    changing the border-radius creates a rounding effect.
+    */
     #first {
         display: block;
-        margin: auto;
         border-radius: 50%;
     }
 
     #second {
         display: inline;
-        margin:auto;
 
+    }
+
+    /*
+    You can also style all of the photos at once by saying img instead
+    of a specific name.
+
+    */
+
+    img {
+       margin: auto;
     }
 </style>
