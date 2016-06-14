@@ -5,24 +5,30 @@
     <title>Login</title>
 </head>
 <body>
+<!--make a form that will be used as the way to login-->
 <form name="login" action="index_submit" method="get" accept-charset="utf-8">
     <ul class="form">
         <li>
+           <!--making a text box that will be used for entering the email address-->
             <label for="usermail">Email</label>
-            <input type="email" name="username" placeholder="yourname@email.com" required>
+            <input type="email" name="username" placeholder="yourname@email.com" required> <!--making it so it is required to have filled out before moving on-->
         </li>
         <li>
+            <!--making a text box that will be used for entering the password-->
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="password" required>
+            <input type="password" name="password" placeholder="password" required> <!--making it so it is required to have filled out before moving on-->
         </li>
         <li>
+           <!--making a button that will be used to submit the data from email and password-->
             <input type="submit" class = "button" value="Login">
         </li>
     </ul>
 </form>
 </body>
 
+<!--giveing commands to the object to make them more neat and presentable -->
 <style>
+    /* formatting the text box's */
     ul.form {
         list-style-type: none; /*take away default bullet points*/
         margin: 5em;
@@ -32,22 +38,32 @@
         font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 
+    /*giving options to the button*/
     .button {
+       /* choosing the color for the button */
         background-color: #70d5b3;
-        border-style: outset;
+        border-style: outset; /* set the style orund the edges of the button*/
         border-color: #70d5b3;
         color: white;
-        padding: 5px 20px;
+       
+        padding: 5px 20px; /* to generate space around the text */
+        /*align the button in the center*/
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
+         display: inline-block;
+        text-decoration: none;/*take away the decoration on the texts*/
+       
+        /* setting the fonts */
         font-family: "Trebuchet MS", Helvetica, sans-serif;
         font-size: 15px;
+        /*seeting what the cursor should be when mouse over the button*/
         cursor: pointer;
+        /* setting the button as round on the edges instead of it being rectanglar*/
         border-radius: 12px;
-        margin: 0.3em 0em;
+         
+         margin: 0.3em 0em; /* putting a margin around the button, to give it space and not be touching other objects on the page*/
     }
 
+    /*charascteristic of the button when you mouse over it*/
     .button:hover {
         background-color: #a9f0c4;
         border: inset;
